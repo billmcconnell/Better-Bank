@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* from an example */
+.card-container {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* from an example */
+.card {
+  box-sizing: 0px 5px 7px #25323762;
+}
+
+/* from an example */
+.card-title {
+  color: #212529;
+  font-size: 72px;
+}
+
+.card-text {
+  font-size: 22px;
+}
+
+/* example navbar css */
+
+
+.navbar {
+  background-color: green;
+  box-shadow: 0 3px 8px white;
+}
+
+.nav-link:hover {
+ /* color: #212529; */
+  color: green;
+}
+
+.nav-item {
+  /* color: #212529; */
+   color: green;
+   font-size: 14pt;
+   font-weight: normal;
+ }
+
+ .navbar-brand {
+  font-size: 20pt;
+  font-weight: bold;
+ }
+
+.btn {
+  color: white;
+  background-color: #212529;
+}
+
+.btn-primary {
+  border-color: #212529;
+}
+
+.nav-item:hover {
+  /*background-color: #8d99ae6c;*/
+  background-color: #525552e3;
+  color: whitesmoke;
+  border-radius: 20px;
+}
