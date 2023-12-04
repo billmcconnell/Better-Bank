@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 require('dotenv').config({ path: './env' })
+const path = require('path');
 const cors = require('cors');
 const dal = require('./dal.js');
 
@@ -18,9 +19,23 @@ console.log("~~~~PORT~~~~~~~~")
 console.log(process.env.REACT_APP_PORT);
 console.log("~~~~~~~~~~~~")
 
-// used to serve static files from public directory
-app.use(express.static('public'));
 app.use(cors());
+
+// used to serve static files from public directory
+// app.use(express.static('public'));
+
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, '/client/build')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+    })
+} else {
+    app.get("/", (req, res) => {
+        res.send("API running");
+    });
+}
 
 // create user account
 app.get('/account/create/:name/:email/:password', function (req, res) {
