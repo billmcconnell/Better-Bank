@@ -3,7 +3,7 @@ import { Card } from './context';
 
 const baseUrl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5500';
 //const baseUrl = process.env.PORT || 'http://localhost:5500';
-// const baseUrl = process.env.REACT_APP_PORT ;
+// const baseUrl = process.env.PORT ;
 
 export function CreateAccount({ initializeUser, createWithFirebase }) {
     const [show, setShow] = useState(true);

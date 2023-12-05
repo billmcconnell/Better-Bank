@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-require('dotenv').config({ path: './env' })
+require('dotenv').config({ path: './env' });
+const favicon = require("serve-favicon");
 const path = require('path');
 const cors = require('cors');
 const dal = require('./dal.js');
@@ -16,10 +17,11 @@ console.log(process.env.NODE_ENV);
 console.log("~~~~dirname~~~~~~~~")
 console.log(__dirname)
 console.log("~~~~PORT~~~~~~~~")
-console.log(process.env.REACT_APP_PORT);
+console.log(process.env.PORT);
 console.log("~~~~~~~~~~~~")
 
 app.use(cors());
+app.use(favicon(path.join(__dirname, 'client', 'build', 'favicon.ico')));
 
 // used to serve static files from public directory
 // app.use(express.static('public'));
@@ -147,7 +149,7 @@ app.get('/account/all', function (req, res) {
         });
 });
 
-const PORT = process.env.REACT_APP_PORT || 5500;
+const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
