@@ -26,18 +26,22 @@ app.use(favicon(path.join(__dirname, 'client', 'build', 'favicon.ico')));
 // used to serve static files from public directory
 // app.use(express.static('public'));
 
+//use routes
+app.use("/");
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, '/client/build')));
+    // set static folder
+    app.use(express.static('/client/build'));
 
     app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-    })
-} else {
-    app.get("/", (req, res) => {
-        res.send("API running");
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
-}
+} 
+// else {
+//     app.get("/", (req, res) => {
+//         res.send("API running");
+//     });
+// }
 
 // create user account
 app.get('/account/create/:name/:email/:password', function (req, res) {
