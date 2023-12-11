@@ -20,7 +20,7 @@ console.log(process.env.PORT);
 console.log("~~~~~~~~~~~~")
 
 app.use(cors());
-app.use(favicon(path.join(__dirname, 'client', 'build', 'favicon.ico')));
+
 
 // used to serve static files from public directory
 // app.use(express.static('public'));
