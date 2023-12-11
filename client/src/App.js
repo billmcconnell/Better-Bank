@@ -15,6 +15,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // consider using env to hold the firebase apiKey and other info
 
+const firebaseApiKey = process.env.REACT_APP_FIREBASE_API_KEY;
+const firebaseAuthDomain = process.env.REACT_APP_FIREBASE_AUTH_DOMAIN;
+const firebaseProjectId = process.env.REACT_APP_FIREBASE_PROJECT_ID;
+const firebaseStorageBucket = process.env.REACT_APP_FIREBASE_STORAGE_BUCKET;
+const firebaseMessagingSenderId = process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID;
+const firebaseAppId = process.env.REACT_APP_FIREBASE_APP_ID;
+
 const firebaseConfig = {
   apiKey: "AIzaSyAzqowx_yve-R5hIr1--KEgL8Qx7SmJefI",
   authDomain: "bank-auth-b3be0.firebaseapp.com",
@@ -22,21 +29,13 @@ const firebaseConfig = {
   storageBucket: "bank-auth-b3be0.appspot.com",
   messagingSenderId: "439456617792",
   appId: "1:439456617792:web:77338421dbde47eef396a5"
+  // apiKey: (firebaseApiKey),
+  // authDomain: (firebaseAuthDomain),
+  // projectId: (firebaseProjectId),
+  // storageBucket: (firebaseStorageBucket),
+  // messagingSenderId: (firebaseMessagingSenderId),
+  // appId: (firebaseAppId)
 };
-
-//CRUD
-console.log("~~~~CRUD~~~~~~")
-console.log(process.env.REACT_APP_MONGO_URI);
-console.log("~~~~NODE ENV~~~~~~")
-console.log(process.env.NODE_ENV);
-
-
-//path info
-console.log("~~~~dirname~~~~~~~~")
-console.log(__dirname)
-console.log("~~~~PORT~~~~~~~~")
-console.log(process.env.PORT);
-console.log("~~~~~~~~~~~~")
 
 // Initialize Firebase
 initializeApp(firebaseConfig);
@@ -44,7 +43,7 @@ const auth = getAuth();
 const nullUser = { balance: 0 };
 
 function App() {
-  
+
   // const baseUrl = process.env.PORT;
   // const baseUrl = process.env.PORT || 'http://localhost:5500';
   const baseUrl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5500';
