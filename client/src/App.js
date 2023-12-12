@@ -23,18 +23,12 @@ const firebaseMessagingSenderId = process.env.REACT_APP_FIREBASE_MESSAGING_SENDE
 const firebaseAppId = process.env.REACT_APP_FIREBASE_APP_ID;
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAzqowx_yve-R5hIr1--KEgL8Qx7SmJefI",
-  authDomain: "bank-auth-b3be0.firebaseapp.com",
-  projectId: "bank-auth-b3be0",
-  storageBucket: "bank-auth-b3be0.appspot.com",
-  messagingSenderId: "439456617792",
-  appId: "1:439456617792:web:77338421dbde47eef396a5"
-  // apiKey: (firebaseApiKey),
-  // authDomain: (firebaseAuthDomain),
-  // projectId: (firebaseProjectId),
-  // storageBucket: (firebaseStorageBucket),
-  // messagingSenderId: (firebaseMessagingSenderId),
-  // appId: (firebaseAppId)
+  apiKey: (firebaseApiKey),
+  authDomain: (firebaseAuthDomain),
+  projectId: (firebaseProjectId),
+  storageBucket: (firebaseStorageBucket),
+  messagingSenderId: (firebaseMessagingSenderId),
+  appId: (firebaseAppId)
 };
 
 // Initialize Firebase

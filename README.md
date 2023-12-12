@@ -32,3 +32,4 @@ A full stack banking app using Node.js, React.js and Express, created as a Creat
 - support for thousands separators for larger sums
 - a more modern login/signup/forgot password screen
 - generally better UX using Bootstrap components
+
